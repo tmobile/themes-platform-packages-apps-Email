@@ -29,8 +29,13 @@
         <item name="android:gravity">center_horizontal|center_vertical</item>
     </style>
 
-    <style name="ThemeNoTitleBar" parent="android:Theme.NoTitleBar">
+    <style name="Theme"/>
+
+    <style name="ThemeNoTitleBar" parent="Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 </resources>

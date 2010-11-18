@@ -15,6 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pluto="http://www.w3.org/2001/pluto.html"
     package="com.android.email">
 
     <original-package android:name="com.android.email" />
@@ -56,7 +57,8 @@
                 android:description="@string/permission_access_provider_desc"/>
     <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
 
-    <application android:icon="@drawable/icon" android:label="@string/app_name"
+    <application 
+        pluto:isThemeable="true" android:icon="@drawable/icon" android:label="@string/app_name"
         android:name="Email">
         <activity
             android:name=".activity.Welcome">
@@ -69,7 +71,7 @@
         <activity
             android:name=".activity.UpgradeAccounts"
             android:label="@string/upgrade_accounts_title"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:theme="@style/Theme.NoTitleBar"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         <!-- Must be exported in order for the AccountManager to launch it -->
@@ -190,7 +192,7 @@
                 
         <activity
             android:name=".activity.MessageView"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:theme="@style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name=".activity.MessageCompose"
